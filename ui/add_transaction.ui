@@ -3,121 +3,75 @@
  <class>AddTransactionDialog</class>
  <widget class="QDialog" name="AddTransactionDialog">
   <layout class="QFormLayout">
+
    <item row="0" column="0">
-    <widget class="QLabel">
-     <property name="text">
-      <string>Дата</string>
-     </property>
-    </widget>
+    <widget class="QLabel"><property name="text"><string>Дата</string></property></widget>
    </item>
-   <item row="0" column="1">
-    <widget class="QDateEdit" name="dateEdit"/>
-   </item>
+   <item row="0" column="1"><widget class="QDateEdit" name="dateEdit"/></item>
 
    <item row="1" column="0">
-    <widget class="QLabel">
-     <property name="text">
-      <string>Счёт</string>
-     </property>
-    </widget>
+    <widget class="QLabel"><property name="text"><string>Счёт</string></property></widget>
    </item>
-   <item row="1" column="1">
-    <widget class="QComboBox" name="cmbAccount"/>
-   </item>
+   <item row="1" column="1"><widget class="QComboBox" name="cmbAccount"/></item>
 
    <item row="2" column="0">
-    <widget class="QLabel">
-     <property name="text">
-      <string>Категория</string>
-     </property>
-    </widget>
+    <widget class="QLabel"><property name="text"><string>Категория</string></property></widget>
    </item>
-   <item row="2" column="1">
-    <widget class="QLineEdit" name="edtCategory"/>
-   </item>
+   <item row="2" column="1"><widget class="QLineEdit" name="edtCategory"/></item>
 
    <item row="3" column="0">
-    <widget class="QLabel">
-     <property name="text">
-      <string>Тип операции</string>
-     </property>
-    </widget>
+    <widget class="QLabel"><property name="text"><string>Тип операции</string></property></widget>
    </item>
    <item row="3" column="1">
     <widget class="QWidget" name="operationType" native="true">
      <layout class="QHBoxLayout">
-      <item>
-       <widget class="QRadioButton" name="rbtnExpense">
-        <property name="text">
-         <string>Расход</string>
-        </property>
-        <property name="checked">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QRadioButton" name="rbtnIncome">
-        <property name="text">
-         <string>Доход</string>
-        </property>
-       </widget>
-      </item>
+      <item><widget class="QRadioButton" name="rbtnExpense"><property name="text"><string>Расход</string></property><property name="checked"><bool>true</bool></property></widget></item>
+      <item><widget class="QRadioButton" name="rbtnIncome"><property name="text"><string>Доход</string></property></widget></item>
      </layout>
     </widget>
    </item>
 
    <item row="4" column="0">
-    <widget class="QLabel">
-     <property name="text">
-      <string>Сумма</string>
-     </property>
-    </widget>
+    <widget class="QLabel"><property name="text"><string>Сумма</string></property></widget>
    </item>
    <item row="4" column="1">
     <widget class="QDoubleSpinBox" name="spinAmount">
-     <property name="decimals">
-      <number>2</number>
-     </property>
-     <property name="maximum">
-      <double>999999999.00</double>
-     </property>
-     <property name="minimum">
-      <double>0.00</double>
-     </property>
-     <property name="keyboardTracking">
-      <bool>true</bool>
-     </property>
-     <property name="accelerated">
-      <bool>false</bool>
-     </property>
-     <property name="value">
-      <double>0.00</double>
-     </property>
-     <property name="singleStep">
-      <double>1.00</double>
-     </property>
+     <property name="decimals"><number>2</number></property>
+     <property name="maximum"><double>999999999.00</double></property>
+     <property name="value"><double>0.00</double></property>
     </widget>
    </item>
 
    <item row="5" column="0">
-    <widget class="QLabel">
-     <property name="text">
-      <string>Комментарий</string>
-     </property>
-    </widget>
+    <widget class="QLabel"><property name="text"><string>Комментарий</string></property></widget>
    </item>
-   <item row="5" column="1">
-    <widget class="QLineEdit" name="edtComment"/>
+   <item row="5" column="1"><widget class="QLineEdit" name="edtComment"/></item>
+
+   <!-- 🔽 Новый блок для фото -->
+   <item row="6" column="0">
+    <widget class="QLabel"><property name="text"><string>Фото</string></property></widget>
+   </item>
+   <item row="6" column="1">
+    <widget class="QWidget" native="true">
+     <layout class="QHBoxLayout">
+      <item><widget class="QPushButton" name="btnAddPhoto"><property name="text"><string>Добавить фото</string></property></widget></item>
+      <item><widget class="QPushButton" name="btnOpenPhoto"><property name="text"><string>Открыть фото</string></property></widget></item>
+     </layout>
+    </widget>
    </item>
 
-   <item row="6" column="1">
-    <widget class="QDialogButtonBox" name="buttonBox">
-     <property name="standardButtons">
-      <set>QDialogButtonBox::Ok|QDialogButtonBox::Cancel</set>
-     </property>
+   <item row="7" column="1">
+    <widget class="QLabel" name="lblPhotoPath">
+     <property name="text"><string>Фото не выбрано</string></property>
     </widget>
    </item>
+
+   <item row="8" column="1">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="standardButtons"><set>QDialogButtonBox::Ok|QDialogButtonBox::Cancel</set></property>
+    </widget>
+   </item>
+
   </layout>
  </widget>
 </ui>
